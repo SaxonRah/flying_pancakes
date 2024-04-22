@@ -1,0 +1,102 @@
+// ADiscFlightSimulation.cpp
+
+#include "ADiscFlightSimulation.h"
+
+
+// Sets default values
+AADiscFlightSimulation::AADiscFlightSimulation()
+{
+    // Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+    PrimaryActorTick.bCanEverTick = true;
+
+        // Initialize variables
+    this->CurrentPosition = FVector::ZeroVector;
+    this->CurrentVelocity = FVector::ZeroVector;
+    this->WindForce = FVector::ZeroVector;
+}
+
+// Called when the game starts or when spawned
+void AADiscFlightSimulation::BeginPlay()
+{
+    Super::BeginPlay();
+
+}
+
+// Called every frame
+void AADiscFlightSimulation::Tick(float DeltaTime)
+{
+    Super::Tick(DeltaTime);
+
+    // Update
+    Update(DeltaTime);
+}
+
+void AADiscFlightSimulation::SetInitialPosition(const FVector& InInitialPosition)
+{
+    this->CurrentPosition = InInitialPosition;
+}
+
+void AADiscFlightSimulation::SetInitialVelocity(float InInitialVelocity, float InLaunchAngle, float InSpinRate)
+{
+    this->LaunchAngle = InLaunchAngle;
+    this->SpinRate = InSpinRate;
+
+    float LaunchAngleRadians = FMath::DegreesToRadians(InLaunchAngle);
+    this->CurrentVelocity.X = InInitialVelocity * FMath::Sin(LaunchAngleRadians);
+    this->CurrentVelocity.Y = InInitialVelocity * FMath::Cos(LaunchAngleRadians);
+    this->CurrentVelocity.Z = InInitialVelocity * FMath::Sin(LaunchAngleRadians);
+}
+
+void AADiscFlightSimulation::SetWindForce(const FVector& InWindForce)
+{
+    this->WindForce = InWindForce;
+}
+
+void AADiscFlightSimulation::SetDiscProperties(float InMass, float InDragCoefficient, float InLiftCoefficient, float InFrontalArea, float InDiscStability, float InGyroscopicFactor)
+{
+    this->Mass = InMass;
+    this->DragCoefficient = InDragCoefficient;
+    this->LiftCoefficient = InLiftCoefficient;
+    this->FrontalArea = InFrontalArea;
+    this->DiscStability = InDiscStability;
+    this->GyroscopicFactor = InGyroscopicFactor;
+}
+
+void AADiscFlightSimulation::Update(float DeltaTime)
+{
+    // Calculate forces at the current position
+    FVector TotalForce = CalculateTotalForce();
+    float LiftForce = CalculateLiftForce();
+
+    // Use trapezoidal rule for position update
+    FVector OldPosition = this->CurrentPosition;
+    FVector OldVelocity = this->CurrentVelocity;
+
+    // Update velocity using forces at the old position
+    FVector Acceleration = TotalForce / this->Mass;
+    this->CurrentVelocity += 0.5f * (Acceleration + (TotalForce / this->Mass)) * DeltaTime;
+
+    // Update position using velocities at old and new positions
+    this->CurrentPosition += 0.5f * (OldVelocity + this->CurrentVelocity) * DeltaTime;
+}
+
+FVector AADiscFlightSimulation::CalculateTotalForce() const
+{
+    FVector TotalForce;
+
+    // Calculate drag force
+    float VelocitySquared = this->CurrentVelocity.SizeSquared();
+    FVector DragForce = -0.5f * this->DragCoefficient * this->FrontalArea * VelocitySquared * this->CurrentVelocity.GetSafeNormal();
+
+    // Calculate total force including wind
+    TotalForce = DragForce + this->WindForce;
+
+    return TotalForce;
+}
+
+float AADiscFlightSimulation::CalculateLiftForce() const
+{
+    // Calculate lift force
+    float LiftForce = 0.5f * this->LiftCoefficient * this->FrontalArea * this->Gravity * this->SpinRate * this->GyroscopicFactor * this->DiscStability;
+    return LiftForce;
+}
