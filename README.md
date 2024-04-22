@@ -1,5 +1,7 @@
 # Flying Pancakes
-### Creative Commons Attribution-NonCommercial-NoDerivs (Sorry, but this is required).
+## LICENSE
+Creative Commons Attribution-NonCommercial-NoDerivs (Sorry, but this is required).
+
 ### Probably mathematically wrong, but it's close.
 Complete formula for simulating the flight of a disc in a disc golf game.
 Incorporates projectile motion, lift, drag forces, wind, spin, and gyroscopic effects, disc's stability, and angular momentum as it flies through the air.
