@@ -1,4 +1,8 @@
 # Flying Pancakes
+Complete formula for simulating the flight of a disc in a disc golf game.
+
+Incorporates projectile motion, lift, drag forces, wind, spin, and gyroscopic effects, disc's stability, and angular momentum as it flies through the air.
+
 ## LICENSE (Sorry, but this is required).
 [![CC BY-NC-ND 4.0][cc-by-nc-nd-shield]][cc-by-nc-nd]
 
@@ -11,11 +15,8 @@ This work is licensed under a
 [cc-by-nc-nd-image]: https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png
 [cc-by-nc-nd-shield]: https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg
 
-### Probably mathematically wrong, but it's close.
-Complete formula for simulating the flight of a disc in a disc golf game.
-Incorporates projectile motion, lift, drag forces, wind, spin, and gyroscopic effects, disc's stability, and angular momentum as it flies through the air.
-
-### Initial velocity components:
+# Probably mathematically wrong, but it's close.
+## Initial velocity components:
 ```math
 v_{0x} = v_0 \cdot \sin(\theta)
 ```
@@ -25,7 +26,7 @@ v_{0y} = v_0 \cdot \cos(\theta)
 ```math
 v_{0z} = v_0 \cdot \sin(\theta)
 ```
-### Position at time \( t \):
+## Position at time \( t \):
 ```math
 x(t) = x_0 + v_{0x} \cdot t + \int_{0}^{t} \left(\frac{F_{\text{total}_x}}{m}\right) d\tau
 ```
@@ -35,7 +36,7 @@ y(t) = y_0 + v_{0y} \cdot t + \int_{0}^{t} \left(\frac{F_{\text{total}_y}}{m}\ri
 ```math
 z(t) = z_0 + v_{0z} \cdot t - \frac{1}{2} g \cdot t^2 + \int_{0}^{t} \left(\frac{F_{\text{total}_z}}{m}\right) d\tau
 ```
-### Force components:
+## Force components:
 ```math
 F_{\text{total}_x} = -\frac{1}{2} \rho \cdot C_d \cdot A \cdot \| \mathbf{v} \|^2 + F_{\text{wind}_x}
 ```
@@ -49,7 +50,7 @@ F_{\text{total}_z} = m \cdot g -\frac{1}{2} \rho \cdot C_d \cdot A \cdot \| \mat
 F_{\text{lift}_z} = \frac{1}{2} C_l \cdot A \cdot \rho \cdot \| \mathbf{v} \| \cdot \text{SpinRate} \cdot \text{GyroscopicFactor} \cdot S
 ```
 
-### Variables and their descriptions
+## Variables and their descriptions
 ```math
 x_0, y_0, z_0 = \text{initial positions.} 
 ```
