@@ -1,3 +1,9 @@
+// Robert Valentine created the maths and wrote the implementation.
+// (Name before marriage: Robert Chubb) 
+// (Online Name: SaxonRah)
+// (Company Name: Parabolic Labs)
+// Creative Commons Attribution-NonCommercial-NoDerivs (Sorry, but this is required).
+// All credit goes to him and him alone.
 #include <iostream>
 #include <cmath>
 
