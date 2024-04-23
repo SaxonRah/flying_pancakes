@@ -15,6 +15,10 @@ This work is licensed under a
 [cc-by-nc-nd-image]: https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png
 [cc-by-nc-nd-shield]: https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg
 
+Obviously mathematical formulas cannot be copyrighted.
+I can not stop you from implementing this math YOURSELF. You're welcome to.
+However the implementations provided here are under the license.
+
 # Probably mathematically wrong, but it's close.
 ## Initial velocity components:
 ```math
