@@ -69,11 +69,11 @@ void AADiscFlightSimulation::SetDiscProperties(float InMass, float InDragCoeffic
 
 void AADiscFlightSimulation::Update(float DeltaTime)
 {
-    // Calculate forces at the current position
+    // Calculate total force and lift force at the current position
     FVector TotalForce = CalculateTotalForce();
     float LiftForce = CalculateLiftForce();
 
-    // Use trapezoidal rule for position update
+    // Store old position and velocity for trapezoidal rule
     FVector OldPosition = this->CurrentPosition;
     FVector OldVelocity = this->CurrentVelocity;
 
@@ -81,8 +81,10 @@ void AADiscFlightSimulation::Update(float DeltaTime)
     FVector Acceleration = TotalForce / this->Mass;
     this->CurrentVelocity += 0.5f * (Acceleration + (TotalForce / this->Mass)) * DeltaTime;
 
-    // Update position using velocities at old and new positions
+    // Include lift force in position update
+    FVector LiftAcceleration = FVector(0, 0, LiftForce) / this->Mass; // Lift force only affects z-axis acceleration
     this->CurrentPosition += 0.5f * (OldVelocity + this->CurrentVelocity) * DeltaTime;
+    this->CurrentVelocity.Z += 0.5f * (LiftAcceleration.Z + LiftAcceleration.Z) * DeltaTime; // Update z-velocity using lift force
 }
 
 FVector AADiscFlightSimulation::CalculateTotalForce() const
