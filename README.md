@@ -3,6 +3,8 @@ A comprehensive mathematical model for simulating the flight dynamics of a disc 
 
 The model incorporates various physical forces and factors including projectile motion, aerodynamic lift and drag, wind effects, disc spin, stability, and gyroscopic effects.
 
+The whitepaper is under construction, I have yet to publish it. It needs work.
+
 ## LICENSE (Sorry, but this is required).
 [![CC BY-NC-ND 4.0][cc-by-nc-nd-shield]][cc-by-nc-nd]
 
