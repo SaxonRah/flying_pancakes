@@ -40,7 +40,6 @@ z(t) = z_0 + v_{0z} \cdot t - \frac{1}{2} g \cdot t^2 + \int_{0}^{t} \left(\frac
    - The net forces exerted on the disc in each spatial dimension ($F_{total_x}$, $F_{total_y}$, and $F_{total_z}$) are meticulously computed, synthesizing myriad factors. Aerodynamic drag, contingent upon the disc's frontal area ($A$) and drag coefficient ($C_d$), opposes its motion, while lift force, intricately dependent upon parameters such as the lift coefficient ($C_l$), disc stability factor ($S$), and air density ($\rho\$), imparts vertical perturbations. Gravity, a ubiquitous force, manifests vertically downward, whereas wind forces ($F_{wind_x}$, $F_{wind_y}$, $F_{wind_z}$) introduce external perturbations. This holistic force analysis affords a nuanced understanding of the disc's dynamic equilibrium.
 
       3.1. **Lift Force Analysis:**
-
          - In the context of disc golf flight dynamics, the lift force ($F_{lift_z}$) plays a pivotal role in dictating the vertical behavior of the disc as it traverses through the air. Unlike traditional golf balls, which rely predominantly on gravity and backspin for lift, the unique aerodynamic properties of discs enable them to generate substantial lift forces, thereby influencing their trajectory and flight characteristics.
 
       3.2. **Aerodynamic Principles:**
