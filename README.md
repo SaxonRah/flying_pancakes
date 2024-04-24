@@ -1,7 +1,7 @@
 # Flying Pancakes
-Complete formula for simulating the flight of a disc in a disc golf game.
+A comprehensive mathematical model for simulating the flight dynamics of a disc in a disc golf game.
 
-Incorporates projectile motion, lift, drag forces, wind, spin, and gyroscopic effects, disc's stability, and angular momentum as it flies through the air.
+The model incorporates various physical forces and factors including projectile motion, aerodynamic lift and drag, wind effects, disc spin, stability, and gyroscopic effects.
 
 ## LICENSE (Sorry, but this is required).
 [![CC BY-NC-ND 4.0][cc-by-nc-nd-shield]][cc-by-nc-nd]
@@ -17,7 +17,7 @@ This work is licensed under a
 
 Obviously mathematical formulas cannot be copyrighted.
 I can not stop you from implementing this math YOURSELF. You're welcome to.
-However the implementations provided here are under the license.
+However the whitepaper and implementations provided here are under the license.
 
 # Probably mathematically wrong, but it's close.
 ## Initial velocity components:
