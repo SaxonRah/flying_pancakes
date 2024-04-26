@@ -75,7 +75,7 @@ z(t) = z_0 + v_{0z} \cdot t - \frac{1}{2} g \cdot t^2 + \int_{0}^{t} \left(\frac
    - $\rho$: Density of the medium through which the object is moving (e.g., air density).
    - $C_d$: Drag coefficient, a dimensionless coefficient that characterizes the drag or resistance of an object moving through a fluid.
    - $A$: Cross-sectional area of the object.
-   - $\| \mathbf{v} \|$: Magnitude of velocity vector.
+   - $\|\| \mathbf{v} \|\|$: Magnitude of velocity vector.
    - $F_{\text{wind}_x}$: Wind force acting in the x-direction.
    - $F_{\text{wind}_y}$: Wind force acting in the y-direction.
    - $F_{\text{wind}_z}$: Wind force acting in the z-direction.
