@@ -14,13 +14,13 @@ The flight dynamics model presented in this paper considers the following key co
    - Upon release, a disc exhibits an initial velocity vector ($v_0$), which undergoes decomposition into its constituent components along the Cartesian axes. This decomposition, facilitated by the launch angle ($\theta\$), delineates the contributions of velocity along the ($x$, $y$, and $z$) axes. This fundamental step is paramount for subsequent calculations, as it delineates the initial kinematic parameters governing the disc's trajectory.
 
 ```math
-v_{0x} = v_0 \cdot \sin(\theta)
+v_{0x} = v_0 \cdot \cos(\theta) 
 ```
 ```math
-v_{0y} = v_0 \cdot \cos(\theta)
+v_{0y} = v_0 \cdot \sin(\theta) 
 ```
 ```math
-v_{0z} = v_0 \cdot \sin(\theta)
+v_{0z} = v_0 \cdot \cos(\theta) \cdot \sin(\theta)
 ```
 
 2. **Position at Time $t$:**
@@ -77,4 +77,4 @@ F_{\text{lift}_z} = \frac{1}{2} C_l \cdot A \cdot \rho \cdot \| \mathbf{v} \| \c
     - The model includes various parameters such as initial positions ($x_0$, $y_0$, and $z_0$), initial velocity ($v_0$), launch angle ($\theta\$), aerodynamic coefficients ($C_d$ and $C_l$), frontal area ($A$), air density ($\rho\$), gravitational acceleration ($g$), disc mass ($m$), wind forces ($\text{Fwind}_x$, $\text{Fwind}_y$, and $\text{Fwind}_z$), disc stability factor ($S$), spin rate ($\text{SpinRate}$), and gyroscopic factor ($\text{GyroscopicFactor}$).
 
 **Conclusion:**
-The elucidation and integration of these multifaceted elements within a rigorous mathematical framework yield a model poised to comprehensively explicate the intricacies of disc flight dynamics in disc golf simulations. By encapsulating the nuanced interplay of physical forces and environmental conditions, this model furnishes a robust foundation for the precise emulation of disc trajectories across diverse scenarios. Thus, it stands as an indispensable tool for scholarly inquiry, pedagogical elucidation, and practical application within the realm of disc golf simulation and analysis.
+A rigorous mathematical framework integrates multifaceted elements to explain disc flight dynamics in disc golf simulations comprehensively. This model captures the interplay of physical forces and environmental conditions. It provides a robust foundation for emulating disc trajectories accurately across diverse scenarios. Hence, it serves as an essential tool for scholarly inquiry, teaching, and practical use in disc golf simulation and analysis.
