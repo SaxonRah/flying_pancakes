@@ -7,6 +7,13 @@ The whitepaper and implementations are under construction, I have yet to publish
 
 Obviously mathematical formulas cannot be copyrighted. I can not stop you from implementing this math YOURSELF. You're welcome to. However the whitepaper and implementations provided here are under the license given.
 
+# Model Plots :
+
+## Pure Python Plot ---------------------v Numpy Python Plot -----------------v
+<img src="https://github.com/SaxonRah/flying_pancakes/blob/main/plots/PurePython_RungeKutta_Plot.png" width="401" height="344"> <img src="https://github.com/SaxonRah/flying_pancakes/blob/main/plots/Numpy_RungeKutta_Plot.png" width="401" height="344">
+
+
+
 ## LICENSE (Sorry, it's required).
 This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License][cc-by-nc-nd].
 
