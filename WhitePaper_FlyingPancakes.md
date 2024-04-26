@@ -20,7 +20,7 @@ v_{0x} = v_0 \cdot \cos(\theta)
 v_{0y} = v_0 \cdot \sin(\theta) 
 ```
 ```math
-v_{0z} = v_0 \cdot \cos(\theta) \cdot \sin(\theta)
+v_{0z} = v_0 \cdot \cos(\theta) \cdot \sin(\phi)
 ```
 
 2. **Position at Time $t$:**
