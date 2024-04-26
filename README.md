@@ -23,40 +23,9 @@ However the whitepaper and implementations provided here are under the license.
 
 # Probably mathematically wrong, but it's close.
 ## Initial velocity components:
-```math
-v_{0x} = v_0 \cdot \sin(\theta)
-```
-```math
-v_{0y} = v_0 \cdot \cos(\theta)
-```
-```math
-v_{0z} = v_0 \cdot \sin(\theta)
-```
 ## Position at time \( t \):
-```math
-x(t) = x_0 + v_{0x} \cdot t + \int_{0}^{t} \left(\frac{F_{\text{total}_x}}{m}\right) d\tau
-```
-```math
-y(t) = y_0 + v_{0y} \cdot t + \int_{0}^{t} \left(\frac{F_{\text{total}_y}}{m}\right) d\tau
-```
-```math
-z(t) = z_0 + v_{0z} \cdot t - \frac{1}{2} g \cdot t^2 + \int_{0}^{t} \left(\frac{F_{\text{total}_z}}{m}\right) d\tau
-```
 ## Force components:
-```math
-F_{\text{total}_x} = -\frac{1}{2} \rho \cdot C_d \cdot A \cdot \| \mathbf{v} \|^2 + F_{\text{wind}_x}
-```
-```math
-F_{\text{total}_y} = -\frac{1}{2} \rho \cdot C_d \cdot A \cdot \| \mathbf{v} \|^2 + F_{\text{wind}_y}
-```
-```math
-F_{\text{total}_z} = m \cdot g -\frac{1}{2} \rho \cdot C_d \cdot A \cdot \| \mathbf{v} \|^2 + F_{\text{wind}_z} + F_{\text{lift}_z}
-```
-```math
-F_{\text{lift}_z} = \frac{1}{2} C_l \cdot A \cdot \rho \cdot \| \mathbf{v} \| \cdot \text{SpinRate} \cdot \text{GyroscopicFactor} \cdot S
-```
-
-## Variables and their descriptions
+## Variables and their descriptions:
 ```math
 x_0, y_0, z_0 = \text{initial positions.} 
 ```
@@ -68,6 +37,9 @@ v_{0x}, v_{0y}, v_{0z} = \text{initial velocity components.}
 ```
 ```math
 \theta = \text{launch angle.}
+```
+```math
+\alpha = \text{attack angle.}
 ```
 ```math
 C_d = \text{drag coefficient.}
