@@ -3,7 +3,7 @@ A comprehensive mathematical model for simulating the flight dynamics of a disc 
 
 The model incorporates various physical forces and factors including projectile motion, aerodynamic lift and drag, wind effects, disc spin, stability, and gyroscopic effects.
 
-The whitepaper and implementations are under construction, I have yet to publish the paper. It needs major work as the implemenation has driven the formulas. The Python implementations look correct, although it could be wrong still.
+The whitepaper and implementations are under construction, I have yet to publish the paper. It needs major work as the implemenation has driven the formulas. The formulas and the Python implementations look correct and seem to match, although it could be wrong still. It should be noted that runge-kutta is used in the implementations where the formula has explicit integration.
 
 ## LICENSE (Sorry, it's required).
 Obviously mathematical formulas cannot be copyrighted.
@@ -28,7 +28,7 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDeri
 <img src="https://github.com/SaxonRah/flying_pancakes/blob/main/plots/PurePython_RungeKutta_Plot.png" width="401" height="344"> <img src="https://github.com/SaxonRah/flying_pancakes/blob/main/plots/Numpy_RungeKutta_Plot.png" width="401" height="344">
 
 # Probably mathematically incorrect, but it's close.
-The equations describe the motion of a disc-like projectile in three-dimensional space. They take into account forces such as gravity, drag, wind, and lift. The trajectory equations describe the position of the disc-like object over time, while the total force equations account for the various forces acting on the disc-like object.
+The equations describe the motion of a disc-like projectile in three-dimensional space. They take into account forces such as gravity, drag, wind, and lift. The trajectory equations describe the position of the disc-like object over time, while the total force equations account for the various forces like spin and gyroscopic effect acting on the disc-like object.
 
 1. **Initial Velocity Components**:
    - $v_{0x}$: Initial velocity component in the x-direction.
